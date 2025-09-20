@@ -3,7 +3,7 @@ from typing import List, Dict
 from rank_bm25 import BM25Okapi
 import nltk
 from nltk.tokenize import wordpunct_tokenize
-nltk.download('punkt', quiet=True)  # ensure tokenizer is available
+#nltk.download('punkt', quiet=True)  # ensure tokenizer is available
 
 class BM25Store:
     def __init__(self, path: str):

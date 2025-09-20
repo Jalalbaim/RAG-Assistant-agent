@@ -1,0 +1,24 @@
+Sujet:
+Dans le cadre de notre projet de maquillage virtuel (Virtual Try-On), nous cherchons à optimiser le processus d'ajustement des propriétés des produits (métallique, rugosité, etc.). Actuellement, cette tâche est réalisée par des experts, ce qui est à la fois coûteux et chronophage. Nous explorons l'utilisation de l'inverse rendering pour ajuster automatiquement ces propriétés, et nous avons besoin de vous pour nous aider à concrétiser cette solution innovante.
+Le/la stagiaire travaillera sur le développement et l'implémentation l'algorithm d'inverse rendering pour ajuster automatiquement les propriétés des produits de maquillage dans notre application de Virtual Try-On. L'objectif est de faire un POC tout en améliorant la précision et la qualité des rendus.
+
+Responsabilités :
+
+•	Développer des algorithmes d'inverse rendering pour ajuster automatiquement les propriétés des produits de maquillage (métallique, rugosité, etc.).
+•	Intégrer et tester ces algorithmes avec des images d'acquisition de produit.
+•	Documenter les processus et les résultats, et présenter les avancées du projet aux parties prenantes.
+
+Compétences Requises :
+•	Solides connaissances en informatique graphique et en traitement d'image.
+•	Expérience en développement d'algorithmes d'inverse rendering ou de techniques similaires.
+•	Maîtrise des langages de programmation tels que Python, C++ ou autres langages pertinents.
+•	Connaissance des outils et bibliothèques de rendu graphique (OpenGL, Vulkan, etc.).
+•	Capacité à travailler en équipe et à communiquer efficacement avec des experts de différents domaines.
+•	Autonomie, rigueur et esprit d'initiative.
+
+Compétences Souhaitées :
+•	Expérience avec des projets de réalité augmentée ou virtuelle.
+•	Connaissance des techniques de machine learning appliquées à l'informatique graphique.
+•	Intérêt pour l'industrie de la beauté et du maquillage.
+
+

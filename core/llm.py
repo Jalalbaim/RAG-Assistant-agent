@@ -23,8 +23,22 @@ class LLMClient:
                 temperature=0.2,
             )
             return resp.choices[0].message.content.strip()
-        elif self.provider == "ollama":
-            # uses chat endpoint-like format
-            prompt = f"<|system|>\n{system}\n<|user|>\n{user}"
-            r = self._client.generate(model=self.cfg.OLLAMA_MODEL, prompt=prompt, options={"temperature":0.2})
+
+        # ---- OLLAMA (Gemma-friendly) ----
+        try:
+            # Utilise la vraie API "chat" -> laisse le template du modèle faire le bon formatage
+            resp = self._client.chat(
+                model=self.cfg.OLLAMA_MODEL,
+                messages=[{"role":"system","content":system},{"role":"user","content":user}],
+                options={"temperature": 0.2},
+            )
+            return resp["message"]["content"].strip()
+        except Exception:
+            # Fallback robuste si jamais l’API chat n’est pas dispo
+            prompt = f"SYSTEM:\n{system}\n\nUSER:\n{user}\n\nASSISTANT:"
+            r = self._client.generate(
+                model=self.cfg.OLLAMA_MODEL,
+                prompt=prompt,
+                options={"temperature": 0.2},
+            )
             return r["response"].strip()

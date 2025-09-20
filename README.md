@@ -2,7 +2,7 @@
 
 **Objectif** : Répondre aux questions à partir des documents internes (PDF, pages exportées, emails .eml), avec **citations garanties** et **garde-fous** pour PII/secrets.
 
-## Setup
+## Stack
 - Python, FastAPI
 - Embeddings: sentence-transformers (par défaut)
 - Vector store: ChromaDB (local, persistant)
@@ -10,7 +10,7 @@
 - OCR: Tesseract (optionnel si PDF scannés)
 - LLM: OpenAI *ou* Ollama (local).
 
-## To launch
+## Lancer
 ```bash
 python -m venv .venv && source .venv/bin/activate  # (Windows: .venv\Scripts\activate)
 pip install -r requirements.txt
@@ -26,3 +26,7 @@ uvicorn app.main:app --reload --port 8000
 - `POST /search` : debug retrieval (retours top-k).
 - `GET /health` : ping.
 
+## Notes
+- Si OCR nécessaire, installez Tesseract en système et (optionnel) Poppler pour `pdf2image`.
+- Pour Ollama : installez `ollama`, puis `ollama pull llama3.1:8b-instruct` (ou autre).
+- Les réponses incluent des références de type `[#3]` — validées par l’agent de vérification.

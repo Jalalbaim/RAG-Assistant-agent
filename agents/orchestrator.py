@@ -45,6 +45,7 @@ class Orchestrator:
 
         # 2) Réponse conditionnée au contexte
         answer = self.responder.answer(question, passages)
+        print("[ASK]", question, "->", answer[:300])
 
         # 3) Vérif citations
         ok = self.verifier.verify(answer, passages)
